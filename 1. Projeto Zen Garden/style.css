@@ -1,0 +1,27 @@
+/*
+ .principal{
+    color: #f2133c;
+}
+.background{
+    color: #0a3b59;
+}
+.destaque{
+    color: #f2b9ac;
+}
+*/
+:root{
+   --cor-background: #AAA195;
+   --cor-destaque:#FFD396;
+   --cor-font: #332512;
+}
+
+
+html{
+    background: var(--cor-background);
+    color: var(--cor-font);
+
+}
+
+.summary{
+    background: var(--cor-destaque);
+}
