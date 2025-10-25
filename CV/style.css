@@ -1,0 +1,199 @@
+/* ======== CONFIGURAÇÕES GERAIS ======== */
+:root {
+  --cor-principal: #004aad;     /* azul escuro */
+  --cor-secundaria: #f5f5f5;    /* cinza muito claro */
+  --cor-destaque: #ffcc00;      /* amarelo destaque */
+  --fonte-titulo: 'Poppins', sans-serif;
+  --fonte-texto: 'Open Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-texto);
+  background-color: var(--cor-secundaria);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ======== MENU ======== */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--cor-principal);
+  color: white;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--cor-destaque);
+}
+
+/* ======== CABEÇALHO ======== */
+header {
+  margin-top: 90px; /* Espaço para o menu fixo */
+  background-color: white;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 4px solid var(--cor-principal);
+}
+
+header h1 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-principal);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid var(--cor-destaque);
+}
+
+#contato {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ======== CONTEÚDO ======== */
+main {
+  padding: 2rem;
+}
+
+section {
+  background-color: white;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-principal);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--cor-destaque);
+  display: inline-block;
+}
+
+h3 {
+  color: var(--cor-principal);
+  font-family: var(--fonte-titulo);
+}
+
+ul, ol {
+  margin-left: 1.5rem;
+}
+
+section p {
+  margin-bottom: 0.5rem;
+}
+
+/* ======== EDUCAÇÃO E EXPERIÊNCIA ======== */
+#educacao ul,
+#experiencia ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  margin-left: 0;
+}
+
+#educacao li,
+#experiencia li {
+  background-color: var(--cor-secundaria);
+  padding: 1rem;
+  border-left: 4px solid var(--cor-principal);
+  border-radius: 8px;
+}
+
+/* ======== RODAPÉ ======== */
+footer {
+  background-color: var(--cor-principal);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: var(--cor-destaque);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header h1, header img, #contato {
+    margin: 0.5rem 0;
+  }
+
+  section {
+    padding: 1rem;
+  }
+}
+
+/* --- DESKTOP --- */
+@media (min-width: 769px) {
+  nav ul {
+    flex-direction: row;
+  }
+
+  main {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #educacao ul,
+  #experiencia ul {
+    align-items: flex-start;
+  }
+}
